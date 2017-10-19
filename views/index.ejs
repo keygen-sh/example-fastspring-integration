@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Purchase Software</title>
+  </head>
+  <body>
+    <h1>FastSpring Example</h1>
+    <a href="#" data-fsc-item-path-value="example-product" data-fsc-action="Reset,Add,Checkout">
+      Buy Now
+    </a>
+    <script>
+      // ATTENTION: Make sure to add the following property to your embed script tag:
+      //   data-popup-closed="onFSPopupClosed"
+      function onFSPopupClosed(order) {
+        if (order.id) {
+          window.location.replace("/success?orderId=" + order.id)
+        }
+      }
+    </script>
+    <!-- Replace this FastSpring Pop-up Storefront embed code with your own -->
+    <script id="fsc-api" src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.7.4/fastspring-builder.min.js" type="text/javascript" data-popup-closed="onFSPopupClosed" data-storefront="keygen.test.onfastspring.com/popup-fastspring-example"></script>
+  </body>
+</html>
